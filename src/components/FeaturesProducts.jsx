@@ -1,10 +1,15 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import axios from 'axios'
 import ProductLoadingSkeleton from './ProductLoadingSkeleton'
 import { Link } from 'react-router-dom'
 import FeaturedSkeleton from './FeaturedSkeleton'
+import useShop, { shopContext } from '../ShopContext'
 
 const FeaturesProducts = () => {
+      const { addToCart } = useShop();
+          let context = useContext(shopContext)
+      
+
       let [products, setProducts] = useState([])
         let [Loading, setLaoading] = useState(false)
       
@@ -98,7 +103,9 @@ const FeaturesProducts = () => {
               {"★".repeat(Math.round(5 - product.rating))}
             </span>
           </div>
-         <button className='text-[18px] bg-pink-600 text-white hover:bg-pink-700 duration-200 mt-5 w-full lg:w-full h-[50px] rounded-[10px] '>Add To Cart</button>
+         <button className='text-[18px] bg-pink-600 text-white hover:bg-pink-700 duration-200 mt-5 w-full lg:w-full h-[50px] rounded-[10px] '
+         onClick={() => context.addToCart(product)}
+         >Add To Cart</button>
 
         </div>
       </div>
