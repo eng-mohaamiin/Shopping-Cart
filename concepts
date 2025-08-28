@@ -1,0 +1,18 @@
+
+
+
+useParams() wuxuu si fudud u akhriyaa id ka URL-ka, wuxuuna kuu soo celinayaa object-kan
+
+
+part tow 
+useParams() kaliya wuxuu shaqeeyaa gudaha component-yo ku jira Route oo leh :param sida :id.
+
+Value-ga uu ku siiyo useParams() had iyo jeer wuxuu noqon doonaa string, xitaa haddii uu number yahay (waxaad Number(id) u beddeli kartaa haddii loo baahdo)
+
+
+part three 
+✅ Waa maxay shaqada useParams()?
+
+useParams() waxaa laga helaa react-router-dom, waxaana loo isticmaalaa:
+
+In laga akhriyo dynamic parameters-ka ku jira URL-ka, sida :id, :slug, iwm.
